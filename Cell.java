@@ -1,7 +1,5 @@
-/**
- * A cell that represents a single tile of the maze.
- * @author Hugh Han
- */
+
+/** A cell that represents a single tile of the maze. */
 public class Cell {
 
     /** whether or not wall on north side exists. */
@@ -16,9 +14,7 @@ public class Cell {
     /** whether or not wall on west side exists. */
     private boolean west; 
     
-    /**
-     * Cell constructor, has four walls by default.
-     */
+    /** Cell constructor. Creates four walls by default. */
     public Cell() {
         this.north = true;
         this.south = true;
@@ -49,27 +45,11 @@ public class Cell {
     }
 
     /**
-     * Indicate whether this cell's north wall should exist.
-     * @param northVal  true if wall exists; false otherwise
-     */
-    public void setNorth(boolean northVal) {
-        this.north = northVal;
-    }
-
-    /**
      * Return whether this cell's south wall exists.
      * @return true if and only if the south wall exists
      */
     public boolean hasSouth() {
         return this.south;
-    }
-
-    /**
-     * Indicate whether this cell's south wall should exist.
-     * @param southVal  true if wall exists; false otherwise
-     */
-    public void setSouth(boolean southVal) {
-        this.south = southVal;
     }
 
     /**
@@ -81,19 +61,35 @@ public class Cell {
     }
 
     /**
-     * Indicate whether this cell's west wall should exist.
-     * @param westVal true if wall exists; false otherwise
-     */
-    public void setWest(boolean westVal) {
-        this.west = westVal;
-    }
-
-    /**
      * Return whether this cell's east wall exists.
      * @return true if and only if the east wall exists
      */
     public boolean hasEast() {
         return this.east;
+    }
+
+    /**
+     * Indicate whether this cell's north wall should exist.
+     * @param northVal  true if wall exists; false otherwise
+     */
+    public void setNorth(boolean northVal) {
+        this.north = northVal;
+    }
+
+    /**
+     * Indicate whether this cell's south wall should exist.
+     * @param southVal  true if wall exists; false otherwise
+     */
+    public void setSouth(boolean southVal) {
+        this.south = southVal;
+    }
+
+    /**
+     * Indicate whether this cell's west wall should exist.
+     * @param westVal true if wall exists; false otherwise
+     */
+    public void setWest(boolean westVal) {
+        this.west = westVal;
     }
 
     /**

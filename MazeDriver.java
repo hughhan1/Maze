@@ -1,11 +1,7 @@
+
 /**
  * Driver to generate a random a Maze object using a union-find data
  * structure.
- *
- * Takes desired number of rows and number of columns as command-line 
- * arguments.  (When the specified dimensions are too small or large, the
- * appearance of rendered maze may be improved by resizing the generated
- * window.)
  */
 import java.util.Random;
 
@@ -24,36 +20,32 @@ public final class MazeDriver {
      */
     public static void main(String[] args) {
 
-        //Collect 2 command-line arguments specifying numbers of rows & columns
+        /* Collect command-line arguments specifying numbers of rows & columns. */
         if (args.length < 2) {
             throw new IllegalArgumentException("Two arguments are required.");
         }
 
         int numRows = 0;
         int numCols = 0;
+
         try {
             numRows = Integer.parseInt(args[0]);
             numCols = Integer.parseInt(args[1]);
-
         } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("Both arguments must be "
-                + "integers.");
+            throw new IllegalArgumentException("Both arguments must be integers.");
         }
         
         if (numRows < 1 || numCols < 1) {
-            throw new IllegalArgumentException("Both arguments must be "
-                + "positive.");
+            throw new IllegalArgumentException("Both arguments must be positive.");
         }
         
-        //Create new Maze framework using the given dimensions and 
-        //a Random generator
-        Random generator = new Random();
-        Maze maze = new Maze(generator, numRows, numCols);
+        /* Create new Maze framework. */
+        Maze maze = new Maze(new Random(), numRows, numCols);
         
-        //Generate an actual maze at random
+        /* Generate the maze. */
         maze.generateMaze();
 
-        //Display the generated maze in a separate window
+        /* Display the generated maze in a separate window. */
         MazeRenderer renderer = new MazeRenderer(maze);
         renderer.createAndShowGUI();
     }

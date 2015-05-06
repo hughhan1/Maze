@@ -1,3 +1,4 @@
+
 import java.awt.Graphics;
 import java.awt.GridLayout;
 
@@ -5,9 +6,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-/**
- * Class to create a window representing a maze.
- */
+/** Class to create a window representing a maze. */
 public class MazeRenderer extends JFrame {
     
     /** serial versioning number to make checkstyle happy. */
@@ -58,21 +57,21 @@ public class MazeRenderer extends JFrame {
     private String findCorrectTilePath(Cell cell) {
 
         String code = "";
-        if (!cell.hasNorth()) {
+        if (!cell.hasNorth()) 
             code += "n";
-        }
-        if (!cell.hasSouth()) {
+
+        if (!cell.hasSouth()) 
             code += "s";
-        }
-        if (!cell.hasEast()) {
+
+        if (!cell.hasEast())
             code += "e";
-        }
-        if (!cell.hasWest()) {
+
+        if (!cell.hasWest()) 
             code += "w";
-        }
-        if (code.equals("")) {
+
+        if (code.equals("")) 
             code = "0";
-        }
+
         return "tiles/maze_" + code + ".png";
     }
 

@@ -1,9 +1,7 @@
+
 import java.util.Random;
 
-/**
- * A class to implement a maze.
- * @author Hugh Han
- */
+/** A class to implement a maze. */
 public class Maze {
 
     /** The maze. */

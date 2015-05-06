@@ -1,7 +1,5 @@
-/**
- * A class to represent the walls inside a maze.
- * @author Hugh Han
- */
+
+/** A class to represent the walls inside a maze. */
 public class Wall {
 
     /** The row preceding the wall. */

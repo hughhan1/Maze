@@ -1,7 +1,5 @@
-/**
- * Implementation for a union-find data structure with int-type items.
- * @author Hugh Han
- */
+
+/** Implementation for a union-find data structure with int-type items. */
 public class UnionFind {
 
     /** The union-find data structure. */
