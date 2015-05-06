@@ -13,14 +13,16 @@ This is a command-line Java application to generate random mazes.
 To use this application:
 
 1. Clone this repository using ```git clone https://github.com/hughhan1/Maze.git```.
+3. Compile the source code using ```javac *.java```.
 2. Run ```java MazeDriver <rows> <cols>```, where <rows> and <cols> are the number of rows and columns of your maze.
 
 Example: 
 
-```cd ~/Desktop```
-
-```git clone https://github.com/hughhan1/Maze.git```
-
-```java MazeDriver 15 20```
+```
+$ cd ~/Desktop
+$ git clone https://github.com/hughhan1/Maze.git
+$ javac *.java
+$ java MazeDriver 15 20
+```
 
 This will generate a random 15 x 20 maze, with 15 rows and 20 columns.
